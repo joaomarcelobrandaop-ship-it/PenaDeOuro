@@ -742,6 +742,26 @@ body{overflow-wrap:break-word}
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 32%;
 }
 
+
+/* ---------- pintinhos ---------- */
+.pt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+@media(max-width:900px){.pt-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){.pt-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.pt-grid{grid-template-columns:1fr}}
+.pt-card{border:1px solid var(--beige-d);border-radius:var(--r);overflow:hidden;background:var(--white);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s,border-color .18s}
+.pt-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(20,20,20,.1);border-color:var(--gold)}
+.pt-ph{aspect-ratio:4/5;position:relative;overflow:hidden;background:var(--beige)}
+.pt-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pt-ph .ph{position:absolute;inset:0;width:100%;height:100%}
+.pt-badge{position:absolute;top:8px;left:8px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:2px;background:var(--black);color:var(--gold)}
+.pt-pais{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(20,20,20,.85));color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:.03em;padding:20px 8px 7px;text-align:center;text-decoration:none;display:block}
+.pt-b{padding:13px 14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pt-t{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-d)}
+.pt-b h3{font-family:var(--display);font-size:19px;font-weight:600;line-height:1.05}
+.pt-nao{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase;background:var(--beige);color:var(--muted);padding:3px 7px;border-radius:2px;border:1px solid var(--beige-d);width:fit-content}
+.pt-preco{font-family:var(--mono);font-size:15px;font-weight:600;color:var(--ink);margin-top:2px}
+.pt-preco small{color:var(--muted);font-weight:400;font-size:11px}
+.pt-wa{margin-top:auto;display:block;text-align:center;background:var(--gold);color:var(--black);font-weight:700;font-size:12.5px;padding:9px;border-radius:var(--r);text-decoration:none}
 </style>
 </head>
 <body>
@@ -754,6 +774,7 @@ body{overflow-wrap:break-word}
       <a href="#sobre">Sobre</a>
       <a href="#guia">Guia de raças</a>
       <a href="#catalogo">Plantel</a>
+      <a href="#pintinhos">Pintinhos</a>
       <a href="#compra">Como comprar</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
@@ -906,6 +927,30 @@ body{overflow-wrap:break-word}
   </div>
 </section>
 
+<!-- ========================= PINTINHOS ========================= -->
+<section class="sec sec--beige" id="pintinhos">
+  <div class="wrap">
+    <div class="eyebrow rev">Filhotes</div>
+    <h2 class="rev">Pintinhos, por raça</h2>
+    <p class="lead rev" style="max-width:72ch;color:var(--muted)">As fotos são dos nossos pintinhos. Eles nascem por ninhada e ficam juntos no pinteiro até ganhar força — por isso não prometemos estoque fixo: veja as raças e o valor e fale com a gente pra saber quais têm disponível agora. Cada raça vem do seu módulo reprodutor (dá pra ver os pais no catálogo). O sexo não é garantido nessa idade — a gente avisa antes.</p>
+    <div class="pt-grid rev">
+      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-serama.webp" alt="pintinho Serama" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo B →</a></div><div class="pt-b"><span class="pt-t">Módulo B</span><h3>Serama</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 150 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Serama.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo I</span><h3>Ayam Cemani</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 120 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Ayam%20Cemani.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo J</span><h3>Marans</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 75 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Marans.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo A</span><h3>GSB — Sertaneja Balão</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20GSB%20%E2%80%94%20Sertaneja%20Bal%C3%A3o.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-sedosa.webp" alt="pintinho Sedosa" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo K →</a></div><div class="pt-b"><span class="pt-t">Módulo K</span><h3>Sedosa</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Sedosa.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-sedosa-sg.webp" alt="pintinho Sedosa Show Girl" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo H →</a></div><div class="pt-b"><span class="pt-t">Módulo H</span><h3>Sedosa Show Girl</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Sedosa%20Show%20Girl.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-brahma-azul.webp" alt="pintinho Brahma perdiz azul" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo C →</a></div><div class="pt-b"><span class="pt-t">Módulo C</span><h3>Brahma perdiz azul</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Brahma%20perdiz%20azul.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-brahma-light.webp" alt="pintinho Brahma light" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Brahma</span><h3>Brahma light</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Brahma%20light.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo G</span><h3>Belga Barbuda d'Uccle</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Belga%20Barbuda%20d%27Uccle.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo E</span><h3>Sebright</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Sebright.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-rir.webp" alt="pintinho Rhode Island Red" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo N →</a></div><div class="pt-b"><span class="pt-t">Módulo N</span><h3>Rhode Island Red</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 45 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Rhode%20Island%20Red.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-frizada.webp" alt="pintinho Frizada (arrepiada)" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Penas arrepiadas</span><h3>Frizada (arrepiada)</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Frizada%20%28arrepiada%29.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
+    </div>
+    <p class="rev" style="margin-top:26px;font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.7;border-top:1px solid var(--beige-d);padding-top:16px">Os pintinhos saem a partir dos 10 dias (recomendamos esperar 21, quando ganham força). &nbsp;·&nbsp; Retirada no DF (para fora do DF, só enviamos ovos férteis). &nbsp;·&nbsp; Fale no WhatsApp citando a raça — a gente confirma se tem no momento e combina a reserva.</p>
+  </div>
+</section>
+
 <!-- ========================= DIFERENCIAIS ========================= -->
 <section class="sec">
   <div class="wrap">
@@ -1034,10 +1079,8 @@ body{overflow-wrap:break-word}
         </ul>
       </div>
       <div class="ebook__c">
-        <small>Ebook</small>
-        <b>Micro Criatório de Elite</b>
-        <p>Genética, pets e tecnologia: como lucrar alto em pequenos espaços.</p>
-        <a class="btn btn--wa" href="https://govindaterra.hotmart.host/micro-criatorio-de-elite-genetica-pets-e-tecnologia-como-lucrar-alto-em-pequenos-espacos-85e21374-15d5-4257-a71f-59bf431b4952" target="_blank" rel="noopener noreferrer" style="width:100%">Conhecer o ebook</a>
+        <img src="fotos/ebook.webp" alt="Capa do ebook Micro-Criatório de Elite" width="560" height="1004" style="width:100%;border-radius:6px;display:block;box-shadow:0 16px 40px rgba(0,0,0,.5)">
+        <a class="btn btn--wa" href="https://joaomarcelobrandaop-ship-it.github.io/micro-criatorio-de-elite/" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:18px">Conhecer o ebook</a>
       </div>
     </div>
   </div>
