@@ -743,25 +743,6 @@ body{overflow-wrap:break-word}
 }
 
 
-/* ---------- pintinhos ---------- */
-.pt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
-@media(max-width:900px){.pt-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:680px){.pt-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:430px){.pt-grid{grid-template-columns:1fr}}
-.pt-card{border:1px solid var(--beige-d);border-radius:var(--r);overflow:hidden;background:var(--white);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s,border-color .18s}
-.pt-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(20,20,20,.1);border-color:var(--gold)}
-.pt-ph{aspect-ratio:4/5;position:relative;overflow:hidden;background:var(--beige)}
-.pt-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.pt-ph .ph{position:absolute;inset:0;width:100%;height:100%}
-.pt-badge{position:absolute;top:8px;left:8px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:2px;background:var(--black);color:var(--gold)}
-.pt-pais{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(20,20,20,.85));color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:.03em;padding:20px 8px 7px;text-align:center;text-decoration:none;display:block}
-.pt-b{padding:13px 14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
-.pt-t{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-d)}
-.pt-b h3{font-family:var(--display);font-size:19px;font-weight:600;line-height:1.05}
-.pt-nao{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase;background:var(--beige);color:var(--muted);padding:3px 7px;border-radius:2px;border:1px solid var(--beige-d);width:fit-content}
-.pt-preco{font-family:var(--mono);font-size:15px;font-weight:600;color:var(--ink);margin-top:2px}
-.pt-preco small{color:var(--muted);font-weight:400;font-size:11px}
-.pt-wa{margin-top:auto;display:block;text-align:center;background:var(--gold);color:var(--black);font-weight:700;font-size:12.5px;padding:9px;border-radius:var(--r);text-decoration:none}
 </style>
 </head>
 <body>
@@ -889,28 +870,6 @@ body{overflow-wrap:break-word}
     </div>
 
     <div class="cat" id="catalogo-grid"></div>
-
-    <div class="rev" id="pintinhos" style="margin-top:60px;border-top:1px solid var(--beige-d);padding-top:44px">
-      <div class="eyebrow">Filhotes</div>
-      <h2>Pintinhos, por raça</h2>
-      <p class="lead" style="max-width:72ch;margin-top:10px;margin-bottom:6px">As fotos são dos nossos pintinhos. Eles nascem por ninhada e ficam juntos no pinteiro até ganhar força — por isso não prometemos estoque fixo: veja as raças e o valor e fale com a gente pra saber quais têm disponível agora. O sexo não é garantido nessa idade — a gente avisa antes.</p>
-      <div class="pt-grid">
-      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-serama.webp" alt="pintinho Serama" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo B →</a></div><div class="pt-b"><span class="pt-t">Módulo B</span><h3>Serama</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 150 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Serama.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo I</span><h3>Ayam Cemani</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 120 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Ayam%20Cemani.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo J</span><h3>Marans</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 75 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Marans.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo A</span><h3>GSB — Sertaneja Balão</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20GSB%20%E2%80%94%20Sertaneja%20Bal%C3%A3o.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-sedosa.webp" alt="pintinho Sedosa" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo K →</a></div><div class="pt-b"><span class="pt-t">Módulo K</span><h3>Sedosa</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Sedosa.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-sedosa-sg.webp" alt="pintinho Sedosa Show Girl" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo H →</a></div><div class="pt-b"><span class="pt-t">Módulo H</span><h3>Sedosa Show Girl</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Sedosa%20Show%20Girl.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-brahma-azul.webp" alt="pintinho Brahma perdiz azul" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo C →</a></div><div class="pt-b"><span class="pt-t">Módulo C</span><h3>Brahma perdiz azul</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Brahma%20perdiz%20azul.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-brahma-light.webp" alt="pintinho Brahma light" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Brahma</span><h3>Brahma light</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Brahma%20light.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo G</span><h3>Belga Barbuda d'Uccle</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Belga%20Barbuda%20d%27Uccle.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><div class="ph"><span>Foto em breve</span></div><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Módulo E</span><h3>Sebright</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Sebright.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-rir.webp" alt="pintinho Rhode Island Red" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span><a class="pt-pais" href="#catalogo">ver os pais · Módulo N →</a></div><div class="pt-b"><span class="pt-t">Módulo N</span><h3>Rhode Island Red</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 45 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Rhode%20Island%20Red.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      <div class="pt-card"><div class="pt-ph"><img src="fotos/pint-frizada.webp" alt="pintinho Frizada (arrepiada)" width="600" height="750" loading="lazy" decoding="async"><span class="pt-badge">Pintinho</span></div><div class="pt-b"><span class="pt-t">Penas arrepiadas</span><h3>Frizada (arrepiada)</h3><span class="pt-nao">não sexado</span><span class="pt-preco">R$ 50 <small>/ pintinho</small></span><a class="pt-wa" href="https://wa.me/5561999452775?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20pintinho%20de%20Frizada%20%28arrepiada%29.%20Tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Consultar no WhatsApp</a></div></div>
-      </div>
-      <p style="margin-top:24px;font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.7">Os pintinhos saem a partir dos 10 dias (recomendamos esperar 21, quando ganham força). &nbsp;·&nbsp; Retirada no DF (para fora do DF, só enviamos ovos férteis). &nbsp;·&nbsp; Fale no WhatsApp citando a raça — a gente confirma se tem no momento e combina a reserva.</p>
-    </div>
-
   </div>
 </section>
 
@@ -1630,7 +1589,79 @@ const PLANTEL = [
     status:"Reprodutor", preco:null,
     destaque:"Matriz do módulo N. Vermelho uniforme e corpo em bloco, no padrão da raça. Rhode Island Red põe de 250 a 300 ovos por ano — nenhuma outra do plantel chega perto.",
     observacoes:"Mais de 7 meses. Primeira matriz do módulo.",
-    fotos:[F.f54,F.f55,F.f56] }];
+    fotos:[F.f54,F.f55,F.f56] },
+
+  { id:"PINT-SERAMA", pintinho:true, nome:"—", raca:"Serama", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"B", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo B do plantel (reprodutor e matrizes Serama).",
+    status:"À venda", venda:true, preco:150,
+    destaque:"Pintinho de Serama. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:["fotos/pint-serama.webp"] },
+
+  { id:"PINT-AYAM", pintinho:true, nome:"—", raca:"Ayam Cemani", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"I", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo I do plantel (Ayam Cemani).",
+    status:"À venda", venda:true, preco:120,
+    destaque:"Pintinho de Ayam Cemani. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:[] },
+
+  { id:"PINT-MARANS", pintinho:true, nome:"—", raca:"Marans", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"J", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo J do plantel (Marans).",
+    status:"À venda", venda:true, preco:75,
+    destaque:"Pintinho de Marans. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:[] },
+
+  { id:"PINT-GSB", pintinho:true, nome:"—", raca:"GSB — Sertaneja Balão", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"A", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo A do plantel (GSB — Sertaneja Balão).",
+    status:"À venda", venda:true, preco:50,
+    destaque:"Pintinho de GSB — Sertaneja Balão. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:[] },
+
+  { id:"PINT-SEDOSA", pintinho:true, nome:"—", raca:"Sedosa", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"K", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo K do plantel (Sedosa).",
+    status:"À venda", venda:true, preco:50,
+    destaque:"Pintinho de Sedosa. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:["fotos/pint-sedosa.webp"] },
+
+  { id:"PINT-SEDOSA-SG", pintinho:true, nome:"—", raca:"Sedosa Show Girl", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"H", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo H do plantel (Sedosa Show Girl).",
+    status:"À venda", venda:true, preco:50,
+    destaque:"Pintinho de Sedosa Show Girl. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:["fotos/pint-sedosa-sg.webp"] },
+
+  { id:"PINT-BRAHMA-AZUL", pintinho:true, nome:"—", raca:"Brahma", variedade:"Perdiz azul", sexo:"Pintinho", nascimento:"—", modulo:"C", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo C do plantel (Brahma perdiz azul).",
+    status:"À venda", venda:true, preco:50,
+    destaque:"Pintinho de Brahma perdiz azul. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:["fotos/pint-brahma-azul.webp"] },
+
+  { id:"PINT-BRAHMA-LIGHT", pintinho:true, nome:"—", raca:"Brahma", variedade:"Light", sexo:"Pintinho", nascimento:"—", modulo:"—", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem aqui no plantel Pena de Ouro.",
+    status:"À venda", venda:true, preco:50,
+    destaque:"Pintinho de Brahma light. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:["fotos/pint-brahma-light.webp"] },
+
+  { id:"PINT-BELGA", pintinho:true, nome:"—", raca:"Belga Barbuda d'Uccle", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"G", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo G do plantel (Belga Barbuda d'Uccle).",
+    status:"À venda", venda:true, preco:50,
+    destaque:"Pintinho de Belga Barbuda d'Uccle. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:[] },
+
+  { id:"PINT-SEBRIGHT", pintinho:true, nome:"—", raca:"Sebright", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"E", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo E do plantel (Sebright).",
+    status:"À venda", venda:true, preco:50,
+    destaque:"Pintinho de Sebright. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:[] },
+
+  { id:"PINT-RIR", pintinho:true, nome:"—", raca:"Rhode Island Red", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"N", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem no módulo N do plantel (Rhode Island Red).",
+    status:"À venda", venda:true, preco:45,
+    destaque:"Pintinho de Rhode Island Red. Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:["fotos/pint-rir.webp"] },
+
+  { id:"PINT-FRIZADA", pintinho:true, nome:"—", raca:"Frizada (arrepiada)", variedade:"—", sexo:"Pintinho", nascimento:"—", modulo:"—", lote:"—",
+    paiId:"—", paiModulo:"—", maeModulo:"—", origemSangue:"Nascem aqui no plantel Pena de Ouro.",
+    status:"À venda", venda:true, preco:50,
+    destaque:"Pintinho de Frizada (arrepiada). Nasce por ninhada — consulte a disponibilidade.", observacoes:"Sexo não garantido nessa idade.",
+    fotos:["fotos/pint-frizada.webp"] } ];
 
 /* ============================================================
    4. DESTAQUES DO HERO — as aves que ficam alternando no topo
@@ -2081,7 +2112,7 @@ function montarFiltros(){
   const GRUPOS = {
     raca:   { label:"Todas",  itens:unicos("raca").sort() },
     sexo:   { label:"Todas",  itens:["Galo","Galinha","Casal","Pintinho"] },
-    modulo: { label:"Todos",  itens:unicos("modulo").sort() },
+    modulo: { label:"Todos",  itens:unicos("modulo").filter(m=>m!=="—").sort() },
     status: { label:"Todas",  itens:["À venda","Reprodutor","Reservado","Vendida"] },
     variedade:{ label:"Todas", itens: filtros.raca==="Todas" ? []
                 : [...new Set(PLANTEL.filter(a=>a.raca===filtros.raca).map(a=>a.variedade))]
@@ -2197,10 +2228,10 @@ function render(){
           : foto("Foto em breve")}
         <span class="ave__tag ${cls(a.status)}">${a.status}</span>
         ${a.venda && a.status!=="À venda" ? '<span class="ave__tag t-venda" style="top:auto;bottom:9px">à venda</span>' : ""}
-        <span class="ave__mod" title="Módulo ${a.modulo}">${a.modulo}</span>
+        ${a.modulo!=="—" ? `<span class="ave__mod" title="Módulo ${a.modulo}">${a.modulo}</span>` : ""}
       </div>
       <div class="ave__b">
-        <span class="ave__id">${a.codigos ? a.codigos.join(a.combo ? " + " : " a ") : a.id}</span>
+        <span class="ave__id">${a.pintinho ? "Ninhada" : (a.codigos ? a.codigos.join(a.combo ? " + " : " a ") : a.id)}</span>
         <span class="ave__n">${categoria(a)} ${nomeRaca(a)}</span>
         ${(a.nome!=="—" && a.nome!==`${categoria(a)} ${nomeRaca(a)}`) ? `<span class="ave__r">${a.nome}</span>` : ""}
         ${a.qtd>1 ? `<span class="ave__q">${a.qtd} aves neste módulo</span>` : ""}
@@ -2273,15 +2304,16 @@ function abrir(id){
     </dl>
 
     <div class="gen">
-      <div class="gen__t">Origem registrada</div>
-      <div class="gen__tree">
+      <div class="gen__t">${a.pintinho ? "Origem" : "Origem registrada"}</div>
+      ${a.pintinho ? `<div class="gen__tree">${a.origemSangue}</div>
+      <p class="gen__note">Os pintinhos nascem por ninhada e ficam juntos no pinteiro até ganhar força. O sexo não é garantido nessa idade — a gente avisa antes. Fale com a gente para saber se esta raça tem pintinho disponível no momento.</p>` : `<div class="gen__tree">
         <b>LOTE</b> &nbsp;${a.lote}<br>
         ${linhaPai}<br>
         ${linhaMae}<br>
         <b>SANGUE</b> &nbsp;${a.origemSangue}
       </div>
       <p class="gen__note">Não usamos anilha. A identificação é feita por módulo e por lote: o pai é conhecido com exatidão, porque há um único galo por módulo, e a mãe é identificada pelo grupo de matrizes daquele módulo. É assim que mantemos as famílias separadas.</p>
-      ${a.moduloTipo==="solto" ? `<p class="gen__note" style="border-top:none;padding-top:0;color:var(--red)">A área ${a.modulo} é mista, com aves soltas de raças diferentes. Não é módulo reprodutor: ovos postos ali não têm paternidade controlada.</p>` : ""}
+      ${a.moduloTipo==="solto" ? `<p class="gen__note" style="border-top:none;padding-top:0;color:var(--red)">A área ${a.modulo} é mista, com aves soltas de raças diferentes. Não é módulo reprodutor: ovos postos ali não têm paternidade controlada.</p>` : ""}`}
     </div>
 
     ${a.destaque ? `<p class="mdest"><b>Destaque</b>${a.destaque}</p>` : ""}
@@ -2290,7 +2322,7 @@ function abrir(id){
     ${a.preco ? `<div class="mprice">R$ ${a.preco}${a.precoUnidade?` <span style="font-family:var(--body);font-size:16px;font-weight:500;color:var(--muted)">${a.precoUnidade}</span>`:""}<small>${a.precoUnidade?"NÃO VENDEMOS SEPARADO · ":""}VALOR SUJEITO A CONFIRMAÇÃO NO ATENDIMENTO</small></div>` : ""}
 
     <a class="btn btn--wa" style="width:100%" target="_blank" rel="noopener noreferrer"
-       href="${zap(`Olá! Vi a ave ${a.id}${a.nome!=="—"?" — "+a.nome:""}, ${a.raca}, no catálogo do site. Ela ainda está disponível?`)}">
+       href="${zap(a.pintinho ? `Olá! Tenho interesse no pintinho de ${nomeRaca(a)}. Tem disponível?` : `Olá! Vi a ave ${a.id}${a.nome!=="—"?" — "+a.nome:""}, ${a.raca}, no catálogo do site. Ela ainda está disponível?`)}">
       Perguntar sobre esta ave
     </a>`;
 
