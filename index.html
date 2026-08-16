@@ -724,6 +724,24 @@ body{overflow-wrap:break-word}
   html{scroll-behavior:auto}
 }
 
+/* ============================================================
+   CORREÇÃO DEFINITIVA — proporção das fotos (todo o site)
+   Bug: dentro de um card flex, o aspect-ratio NÃO segurava a altura,
+   então fotos muito verticais estouravam a caixa (o card do GSB, p. ex.,
+   ficava altíssimo). Solução: a imagem vira posicionamento absoluto (sai
+   do fluxo, deixa de "empurrar" a caixa) e a caixa manda na proporção 4/5
+   — a mesma das fotos das aves — recortando o excedente com object-fit.
+   Vale p/ catálogo (.ave__ph), guia (.rcard__ph), galeria do modal
+   (.gal__s) e cards de destaque (.regcard__ph).
+   ============================================================ */
+.ave__ph,.rcard__ph,.gal__s,.regcard__ph{aspect-ratio:4/5!important;position:relative;overflow:hidden}
+.ave__ph>img,.ave__ph>.ph,
+.rcard__ph>img,.rcard__ph>.ph,
+.gal__s>img,.gal__s>.ph,
+.regcard__ph>img,.regcard__ph>.ph{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 32%;
+}
+
 </style>
 </head>
 <body>
