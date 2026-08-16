@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pena-de-ouro.vercel.app/sitemap.xml
+Sitemap: https://criatoriopenadeouro.com.br/sitemap.xml
