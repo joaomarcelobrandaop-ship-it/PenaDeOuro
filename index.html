@@ -220,7 +220,7 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
 .regcard__id{font-family:var(--mono);font-size:12px;color:var(--gold-d);font-weight:500;white-space:nowrap}
 .regcard__meta{font-size:13.5px;color:var(--muted);margin-bottom:14px}
 .regcard__notas{
-  border-left:3px solid var(--gold);
+  border:1px solid var(--beige-d);
   background:var(--white);
   padding:12px 14px;display:flex;flex-direction:column;gap:7px;
 }
@@ -233,8 +233,9 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
   font-family:var(--mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;
   padding:4px 8px;border-radius:2px;font-weight:600;
 }
-.herocar__d{display:flex;gap:6px;justify-content:center;padding-top:14px}
-.herocar__d button{width:7px;height:7px;border-radius:50%;background:#4A443A;padding:0;transition:.2s}
+.herocar__d{display:flex;gap:17px;justify-content:center;padding-top:14px}
+.herocar__d button{width:7px;height:7px;border-radius:50%;background:#4A443A;padding:0;transition:.2s;position:relative}
+.herocar__d button::after{content:"";position:absolute;inset:-8.5px}
 .herocar__d button[aria-current="true"]{background:var(--gold);width:20px;border-radius:4px}
 @media(prefers-reduced-motion:reduce){.regcard{transition:none}.regcard.trocando{opacity:1;transform:none}}
 
@@ -298,7 +299,7 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
    CATÁLOGO
    ============================================================ */
 .expl{
-  background:var(--white);border:1px solid var(--beige-d);border-left:4px solid var(--gold);
+  background:var(--white);border:1px solid var(--beige-d);
   border-radius:var(--r);padding:22px 24px;margin-bottom:30px;
 }
 .expl p{font-size:15px;max-width:78ch;color:var(--ink)}
@@ -378,7 +379,7 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
 
 .mhead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:20px 22px 0}
 .mclose{
-  width:38px;height:38px;border-radius:50%;background:var(--beige);flex:none;
+  width:44px;height:44px;border-radius:50%;background:var(--beige);flex:none;
   display:flex;align-items:center;justify-content:center;font-size:19px;color:var(--ink);
 }
 .mclose:hover{background:var(--beige-d)}
@@ -386,11 +387,12 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
 .gal{position:relative;margin:14px 22px 0;border-radius:var(--r);overflow:hidden}
 .gal__t{display:flex;transition:transform .3s}
 .gal__s{min-width:100%;aspect-ratio:4/5}
-.gal__d{display:flex;gap:6px;justify-content:center;padding:11px 0 0}
-.gal__d button{width:7px;height:7px;border-radius:50%;background:var(--beige-d);padding:0}
+.gal__d{display:flex;gap:17px;justify-content:center;padding:11px 0 0}
+.gal__d button{width:7px;height:7px;border-radius:50%;background:var(--beige-d);padding:0;position:relative}
+.gal__d button::after{content:"";position:absolute;inset:-8.5px}
 .gal__d button[aria-current="true"]{background:var(--gold);width:18px;border-radius:4px}
 .gal__a{
-  position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;
+  position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;
   background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;font-size:17px;
 }
 .gal__a:hover{background:var(--white)}
@@ -410,7 +412,7 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
 .dl dd{font-size:14.5px;font-weight:500;text-align:right}
 
 /* bloco de genealogia — assinatura */
-.gen{background:var(--beige);border-left:4px solid var(--gold);border-radius:var(--r);padding:18px 20px;margin-bottom:20px}
+.gen{background:var(--beige);border:1px solid var(--gold);border-radius:var(--r);padding:18px 20px;margin-bottom:20px}
 .gen__t{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);font-weight:600;margin-bottom:13px}
 .gen__tree{font-family:var(--mono);font-size:12.5px;line-height:2}
 .gen__tree b{font-weight:600;color:var(--black)}
@@ -427,7 +429,7 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
 /* ============================================================
    GUIA DE RAÇAS
    ============================================================ */
-.quiz{background:var(--white);border:1px solid var(--beige-d);border-left:4px solid var(--gold);border-radius:var(--r);padding:24px clamp(20px,3vw,30px)}
+.quiz{background:var(--white);border:1px solid var(--beige-d);border-radius:var(--r);padding:24px clamp(20px,3vw,30px)}
 .quiz__h{margin-bottom:18px}
 .qq{margin-bottom:18px}
 .qq>p{font-weight:600;font-size:15.5px;margin-bottom:10px}
@@ -473,7 +475,7 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
 .bar{display:grid;grid-template-columns:82px 1fr 22px;align-items:center;gap:9px}
 .bar__l{font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
 .bar__t{height:6px;background:var(--beige-d);border-radius:3px;overflow:hidden}
-.bar__f{height:100%;background:var(--gold);border-radius:3px;transition:width .5s}
+.bar__f{height:100%;width:100%;background:var(--gold);border-radius:3px;transform-origin:left;transition:transform .5s ease-out}
 .bar__f--hi{background:var(--gold-d)}
 .bar__f--lo{background:var(--beige-d);box-shadow:inset 0 0 0 1px var(--muted)}
 .bar__n{font-family:var(--mono);font-size:11px;font-weight:600;text-align:right;color:var(--ink)}
@@ -494,8 +496,8 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
 .prc--ate li::before{content:"!";color:var(--red)}
 
 .temos{border-radius:var(--r);padding:15px 18px;font-size:14.5px;margin-bottom:18px;line-height:1.55}
-.temos--sim{background:var(--beige);border-left:4px solid var(--gold)}
-.temos--nao{background:var(--red-l);border-left:4px solid var(--red)}
+.temos--sim{background:var(--beige)}
+.temos--nao{background:var(--red-l)}
 .temos b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}
 .temos--sim b{color:var(--gold-d)}
 .temos--nao b{color:var(--red)}
@@ -745,6 +747,7 @@ body{overflow-wrap:break-word}
 }
 
 
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--gold);color:var(--black);padding:10px 16px;border-radius:0 0 6px 0;font-weight:600;text-decoration:none}
 .skip:focus{left:0}
 </style>
@@ -977,8 +980,11 @@ body{overflow-wrap:break-word}
       <h2>Avisamos antes de anunciar</h2>
       <p>Entre na lista e receba o aviso das próximas ninhadas antes de elas irem para o Instagram. Quem está aqui escolhe primeiro.</p>
       <div class="fgrid">
+        <label class="sr-only" for="fNome">Seu nome</label>
         <input type="text" id="fNome" placeholder="Seu nome" autocomplete="name">
+        <label class="sr-only" for="fZap">WhatsApp com DDD</label>
         <input type="tel" id="fZap" placeholder="WhatsApp com DDD" autocomplete="tel">
+        <label class="sr-only" for="fRaca">Raça de interesse</label>
         <select id="fRaca"><option value="">Raça de interesse</option></select>
       </div>
       <div style="margin-top:11px"><button class="btn btn--dark" id="fEnviar" style="width:100%;max-width:280px">Entrar na lista</button></div>
@@ -1722,6 +1728,12 @@ const $$ = s => [...document.querySelectorAll(s)];
 
 const zap = txt => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(txt);
 
+// troca a URL sem recarregar a página; alguns navegadores/contextos restringem isso —
+// se falhar, o site continua funcionando normalmente, só não atualiza o endereço
+function trocarHash(hash){
+  try{ history.replaceState(null,"",hash); }catch(e){}
+}
+
 // links fixos de WhatsApp
 const LINKS = {
   waTopo:   "Olá! Vim pelo site do Pena de Ouro e quero saber mais sobre as aves disponíveis.",
@@ -1816,7 +1828,7 @@ function pintarHero(i){
       const v = g.notas[k];
       const cls = v>=8 ? " bar__f--hi" : (v<=3 ? " bar__f--lo" : "");
       return `<div class="bar"><span class="bar__l">${rot}</span>`
-           + `<span class="bar__t"><span class="bar__f${cls}" style="width:${v*10}%"></span></span>`
+           + `<span class="bar__t"><span class="bar__f${cls}" style="transform:scaleX(${v/10})"></span></span>`
            + `<span class="bar__n">${v}</span></div>`;
     }).join("") + `</div>`;
 
@@ -1894,7 +1906,7 @@ function barra(chave,valor,curto){
   const cls = valor>=8 ? " bar__f--hi" : (valor<=3 ? " bar__f--lo" : "");
   return `<div class="bar">
     <span class="bar__l">${curto ? ROTULOS[chave].split(" ")[0] : ROTULOS[chave]}</span>
-    <span class="bar__t"><span class="bar__f${cls}" style="width:${valor*10}%"></span></span>
+    <span class="bar__t"><span class="bar__f${cls}" style="transform:scaleX(${valor/10})"></span></span>
     <span class="bar__n">${valor}</span>
   </div>`;
 }
@@ -2010,14 +2022,14 @@ function abrirRaca(nome){
 
   $("#ovR").setAttribute("data-open","");
   document.body.style.overflow="hidden";
-  history.replaceState(null,"","#raca-"+encodeURIComponent(r.nome));
+  trocarHash("#raca-"+encodeURIComponent(r.nome));
   $("#rClose").focus();
 }
 
 function fecharRaca(){
   $("#ovR").removeAttribute("data-open");
   document.body.style.overflow="";
-  if(location.hash.startsWith("#raca-")) history.replaceState(null,"",location.pathname+location.search);
+  if(location.hash.startsWith("#raca-")) trocarHash(location.pathname+location.search);
   if(ultimoFoco) ultimoFoco.focus();
 }
 $("#rClose").onclick = fecharRaca;
@@ -2337,7 +2349,7 @@ function abrir(id){
 
   $("#ov").setAttribute("data-open","");
   document.body.style.overflow = "hidden";
-  history.replaceState(null,"","#ave-"+a.id);
+  trocarHash("#ave-"+a.id);
   $("#mClose").focus();
 }
 
@@ -2350,7 +2362,7 @@ function irPara(i){
 function fechar(){
   $("#ov").removeAttribute("data-open");
   document.body.style.overflow = "";
-  history.replaceState(null,"",location.pathname+location.search);
+  trocarHash(location.pathname+location.search);
   if(ultimoFoco) ultimoFoco.focus();
 }
 
@@ -2364,11 +2376,33 @@ $("#mClose").onclick = fechar;
 $("#ov").onclick = e => { if(e.target === $("#ov")) fechar(); };
 $("#galP").onclick = ()=>irPara(galIdx-1);
 $("#galN").onclick = ()=>irPara(galIdx+1);
+// elementos que recebem foco por Tab, dentro do modal que estiver aberto agora
+function focosDoModal(modalEl){
+  return [...modalEl.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])')]
+    .filter(el => el.offsetParent !== null);
+}
+
 document.addEventListener("keydown", e=>{
-  if(!$("#ov").hasAttribute("data-open")) return;
-  if(e.key==="Escape") fechar();
-  if(e.key==="ArrowLeft")  irPara(galIdx-1);
-  if(e.key==="ArrowRight") irPara(galIdx+1);
+  const abertoAve  = $("#ov").hasAttribute("data-open");
+  const abertoRaca = $("#ovR").hasAttribute("data-open");
+  if(!abertoAve && !abertoRaca) return;
+
+  if(e.key==="Escape"){ abertoAve ? fechar() : fecharRaca(); return; }
+
+  if(abertoAve){
+    if(e.key==="ArrowLeft")  irPara(galIdx-1);
+    if(e.key==="ArrowRight") irPara(galIdx+1);
+  }
+
+  // Tab não pode escapar do modal aberto para o conteúdo por trás
+  if(e.key==="Tab"){
+    const modalAtual = abertoAve ? $("#modal") : $("#ovR .modal");
+    const f = focosDoModal(modalAtual);
+    if(!f.length) return;
+    const primeiro = f[0], ultimo = f[f.length-1];
+    if(e.shiftKey && document.activeElement===primeiro){ e.preventDefault(); ultimo.focus(); }
+    else if(!e.shiftKey && document.activeElement===ultimo){ e.preventDefault(); primeiro.focus(); }
+  }
 });
 
 /* ============================================================
