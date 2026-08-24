@@ -182,6 +182,41 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
 .hdr .btn{padding:9px 16px;min-height:40px;font-size:14px}
 @media(max-width:900px){.nav{display:none}.hdr__in{justify-content:space-between}}
 
+/* ---------- botão hambúrguer (só aparece quando o menu de cima some) ---------- */
+.menuBtn{
+  display:none;width:44px;height:44px;flex:none;position:relative;
+  align-items:center;justify-content:center;margin-left:14px;
+}
+.menuBtn span{
+  position:absolute;left:11px;width:22px;height:2px;background:var(--gold);border-radius:2px;
+  transition:transform .26s cubic-bezier(.23,1,.32,1),opacity .2s;
+}
+.menuBtn span:nth-child(1){top:16px}
+.menuBtn span:nth-child(2){top:23px}
+.menuBtn span:nth-child(3){top:30px}
+.menuBtn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menuBtn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menuBtn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.menuBtn{display:flex}}
+
+/* ---------- painel do menu no celular ---------- */
+.menuMobile{
+  position:fixed;inset:62px 0 0 0;z-index:55;background:var(--black);
+  display:flex;flex-direction:column;padding:8px var(--pad) 28px;
+  transform:translateY(-8px);opacity:0;visibility:hidden;
+  transition:transform .26s cubic-bezier(.23,1,.32,1),opacity .22s,visibility .26s;
+  overflow-y:auto;
+}
+.menuMobile[data-open]{transform:none;opacity:1;visibility:visible}
+.menuMobile a{
+  font-family:var(--display);font-size:26px;font-weight:600;color:var(--beige);
+  text-decoration:none;padding:16px 0;border-bottom:1px solid #2C2822;
+}
+.menuMobile a:hover{color:var(--gold)}
+.menuMobile a:last-child{border-bottom:none;margin-top:18px}
+.menuMobile .btn{width:100%}
+@media(max-width:720px){.menuMobile{inset:56px 0 0 0}}
+
 /* ============================================================
    HERO — registro em destaque
    ============================================================ */
@@ -767,8 +802,20 @@ body{overflow-wrap:break-word}
       <a href="#duvidas">Dúvidas</a>
     </nav>
     <a class="btn btn--wa" id="waTopo" href="#">WhatsApp</a>
+    <button class="menuBtn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuMobile">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<nav class="menuMobile" id="menuMobile" aria-hidden="true">
+  <a href="#sobre">Sobre</a>
+  <a href="#guia">Guia de raças</a>
+  <a href="#catalogo">Plantel</a>
+  <a href="#compra">Como comprar</a>
+  <a href="#duvidas">Dúvidas</a>
+  <a class="btn btn--wa" id="waMenu" href="#">Falar no WhatsApp</a>
+</nav>
 
 <!-- ========================= HERO ========================= -->
 <section class="hero" id="topo">
@@ -1739,7 +1786,8 @@ const LINKS = {
   waTopo:   "Olá! Vim pelo site do Pena de Ouro e quero saber mais sobre as aves disponíveis.",
   waHero:   "Olá! Vim pelo site do Pena de Ouro e quero saber mais sobre as aves disponíveis.",
   waFooter: "Olá! Vim pelo site do Pena de Ouro.",
-  waLocal:  "Olá! Gostaria de combinar uma visita ao criatório."
+  waLocal:  "Olá! Gostaria de combinar uma visita ao criatório.",
+  waMenu:   "Olá! Vim pelo site do Pena de Ouro e quero saber mais sobre as aves disponíveis."
 };
 Object.entries(LINKS).forEach(([id,txt])=>{ const el=$("#"+id); if(el) el.href=zap(txt); });
 
@@ -2382,12 +2430,34 @@ function focosDoModal(modalEl){
     .filter(el => el.offsetParent !== null);
 }
 
+/* ---------- menu do celular ---------- */
+function abrirMenu(){
+  $("#menuBtn").setAttribute("aria-expanded","true");
+  $("#menuMobile").setAttribute("data-open","");
+  $("#menuMobile").removeAttribute("aria-hidden");
+  document.body.style.overflow = "hidden";
+}
+function fecharMenu(){
+  $("#menuBtn").setAttribute("aria-expanded","false");
+  $("#menuMobile").removeAttribute("data-open");
+  $("#menuMobile").setAttribute("aria-hidden","true");
+  document.body.style.overflow = "";
+}
+$("#menuBtn").onclick = ()=> $("#menuBtn").getAttribute("aria-expanded")==="true" ? fecharMenu() : abrirMenu();
+$$("#menuMobile a").forEach(a => a.addEventListener("click", fecharMenu));
+
 document.addEventListener("keydown", e=>{
   const abertoAve  = $("#ov").hasAttribute("data-open");
   const abertoRaca = $("#ovR").hasAttribute("data-open");
-  if(!abertoAve && !abertoRaca) return;
+  const menuAberto = $("#menuBtn").getAttribute("aria-expanded")==="true";
+  if(!abertoAve && !abertoRaca && !menuAberto) return;
 
-  if(e.key==="Escape"){ abertoAve ? fechar() : fecharRaca(); return; }
+  if(e.key==="Escape"){
+    if(abertoAve) fechar();
+    else if(abertoRaca) fecharRaca();
+    else if(menuAberto) fecharMenu();
+    return;
+  }
 
   if(abertoAve){
     if(e.key==="ArrowLeft")  irPara(galIdx-1);
