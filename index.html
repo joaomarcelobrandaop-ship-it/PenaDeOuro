@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Pena de Ouro · Aves ornamentais com origem registrada</title>
+<title>Criatório Pena de Ouro · Aves ornamentais em Brasília</title>
 <meta name="description" content="Criatório familiar de galinhas ornamentais em Brasília. Sedosa, Brahma, Serama, Ayam Cemani e mais. Cada ave com módulo e lote registrados.">
 <meta name="author" content="Pena de Ouro">
 <meta name="robots" content="index, follow">
@@ -139,6 +139,10 @@ h3{font-size:clamp(19px,2.2vw,23px);line-height:1.2}
   display:flex;align-items:center;gap:10px;margin-bottom:14px;
 }
 .eyebrow::after{content:"";height:1px;flex:1;background:var(--beige-d);max-width:120px}
+/* A .eyebrow nasceu para fundo claro (dourado escuro). No hero, que e
+   quase preto, ela cai para 3,9:1 — abaixo do minimo de 4,5:1 de texto
+   pequeno. Aqui usa a variante clara. */
+.hero h1 .eyebrow{color:var(--gold)}
 .sec--black .eyebrow{color:var(--gold)}
 .sec--black .eyebrow::after{background:#3A342A}
 
@@ -821,7 +825,7 @@ body{overflow-wrap:break-word}
 <section class="hero" id="topo">
   <div class="wrap hero__in">
     <div>
-      <h1>Cada ave daqui<em>tem endereço de origem.</em></h1>
+      <h1><span class="eyebrow">Criatório de aves ornamentais · Brasília, DF</span>Cada ave daqui<em>tem endereço de origem.</em></h1>
       <p class="hero__sub">Criação familiar de galinhas ornamentais. Anotamos o módulo de origem de cada ave — então sabemos, e mostramos, de onde ela veio.</p>
       <div class="hero__cta">
         <a class="btn btn--wa" id="waHero" href="#">
